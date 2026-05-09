@@ -1,0 +1,147 @@
+body {
+    background-color: #FFF6E0;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tile {
+    height: 80px;
+    aspect-ratio: 1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+    user-select: none;
+}
+
+.tile div {
+    display: none;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #FFF;
+}
+
+.tile div:nth-child(1) { top: 0; left: 0; }
+.tile div:nth-child(2) { top: 0; right: 0; }
+.tile div:nth-child(3) { bottom: 0; left: 0; }
+.tile div:nth-child(4) { bottom: 0; right: 0; }
+
+#score {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 70px;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+    color: #5F2F00;
+    z-index: 100;
+}
+
+#gameOver {
+    position: fixed;
+    inset: 0;
+    background-color: #f3e9d1;
+    z-index: 9999;
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease;
+}
+
+#gameOver.show {
+    transform: translateY(0);
+}
+
+#gameOver.hide {
+    transform: translateY(-100vh);
+}
+
+#gameOverText {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+    color: #5F2F00;
+}
+
+#container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blocks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.block {
+    height: 50px;
+    width: 50px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#playAgain {
+    margin-top: 10px;
+    height: 40px;
+    width: calc(100% - 16px);
+    border: none;
+    border-radius: 0;
+    font-size: 20px;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+    color: #FFF;
+    background-color: #C97C7C;
+    transition: transform 0.2s ease;
+}
+
+#playAgain:hover {
+    transform: scale(1.1);
+}
+
+#trophy {
+    height: 45px;
+    width: auto;
+}
+
+#scores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 35px;
+    color: #C97C7C;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+}
+
+.scoreText {
+    margin: 0;
+}
+
+#scores div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

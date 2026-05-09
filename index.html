@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lily+Script+One&family=Oi&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.jpg">
+    <title>Make 10</title>
+</head>
+<body>
+    <h1 id="score">0</h1>
+    <div id="board"></div>
+    <div id="gameOver">
+        <div id="container">
+            <h1 id="gameOverText">Game Over</h1>
+            <div id="scores">
+                <p id="finalScore" class="scoreText">0</p>
+                <div>
+                    <img src="trophy.jpg" alt="trophy" id="trophy">
+                    <p id="highScore" class="scoreText">0</p>
+                </div>
+            </div>
+            <div id="blocks">
+                <div id="1" class="block" style="background-color: #FCC13D;">1</div>
+                <div id="2" class="block" style="background-color: #cf1d09;">2</div>
+                <div id="3" class="block" style="background-color: #4CB4CC;">3</div>
+                <div id="4" class="block" style="background-color: #7AC843;">4</div>
+                <div id="5" class="block" style="background-color: #723e57;">5</div>
+                <div id="6" class="block" style="background-color: #FF7BAB;">6</div>
+                <div id="7" class="block" style="background-color: #5EAD7F;">7</div>
+                <div id="8" class="block" style="background-color: #C55B15;">8</div>
+                <div id="9" class="block" style="background-color: #888E4F;">9</div>
+                <div id="10" class="block" style="background-color: #E68370;">10</div>
+            </div>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
