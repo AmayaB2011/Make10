@@ -262,6 +262,6 @@ document.getElementById('playAgain').addEventListener('click', () => {
     highestNumber = 0;
     document.getElementById("score").innerText = score;
     document.querySelectorAll('.tile').forEach(el => el.remove());
-    document.querySelectorAll('.block').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.block').forEach(el => el.style.opacity = '0');
     startGame();
 });
